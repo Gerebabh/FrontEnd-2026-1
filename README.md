@@ -63,3 +63,11 @@ Para cada nova atividade, siga o fluxo abaixo:
 Envie o link do seu `Pull Request` pela plataforma de ensino. A avaliação do código será feita usando o sistema de **Code Review**:
 - **Approve (Aprovado)**: Seu código cumpre os requisitos e o "Check" está verde.
 - **Request Changes (Solicitação de Ajustes)**: Foram encontrados pontos de melhoria ou erros. Você deve corrigir na sua máquina, fazer o push e avisar no comentário do PR para uma nova revisão.
+
+# Para subir o Docker e poder trabalhar
+Em aulas01
+
+docker compose up -d
+docker compose exec app bash
+cd aula01
+npm run dev -- --host

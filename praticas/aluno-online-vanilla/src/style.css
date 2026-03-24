@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    --cor-fundo:#e9e9e9;
+    --cor-texto:#303030;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img {
+    width: 3.5rem;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--cor-fundo);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+article ul li {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+body h3 {
+    padding: 0 1rem;
+    background-color: var(--cor-fundo);
+}
+
+nav {
+    display: none;
+}
+
+
+@media (width >=768px) {
+    main {
+        flex-direction: row;
+        margin-top: 1.5rem;
+    }
+
+    nav {
+        display: block;
+        height: 100vw;
+        background-color: var(--cor-fundo);
+        width: 260px;
+        padding: 1rem;
+    }
+
+    article {
+        margin: 0;
+    }
+
+    nav article {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--cor-texto)
+    }
+
+    nav > article > img {
+        width: 3.5rem;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    nav ul li {
+        font-size: larger;
+        font-weight: 700;
+    }
+
+    #info-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 16px;
+        padding-top: 1rem;
+    }
+}
+
