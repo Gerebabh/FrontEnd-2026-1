@@ -72,7 +72,7 @@ nav {
     display: none;
 }
 
-/* CSS LOGIN */
+/* ===== CSS LOGIN ===== */
 .login {
     display: flex;
     flex-direction: column;
@@ -95,9 +95,18 @@ nav {
     text-align: center;
 }
 
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
 .login main label {
     height: 2rem;
     margin: 0 1rem;
+}
+
+.login button {
+    cursor: pointer
 }
 
 .login main input,
@@ -109,6 +118,7 @@ nav {
 
 .login main p {
         margin: 0 1rem;
+        color: red;
 }
 
 footer {
@@ -166,6 +176,16 @@ footer {
         grid-template-rows: auto 1fr;
         gap: 16px;
         padding-top: 1rem;
+    }
+
+    /* ===== CSS LOGIN ===== */
+    .login {
+        align-items: center;
+    }
+
+    .login main {
+        flex-direction: column;
+        width: 500px;
     }
 }
 

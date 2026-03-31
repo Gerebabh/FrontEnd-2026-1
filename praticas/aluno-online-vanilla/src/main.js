@@ -1,38 +1,47 @@
-import './style.css'
+import './style.css';
 
-const botao = document.querySelector("button");
+const form = document.getElementById('formLogin');
 
-botao.addEventListener('click', (e) => {
-    const matriculaInput = document.querySelector('#matricula');
-    const matriculaErro = document.querySelector('#matriculaErro');
-    const senhaInput = document.querySelector('#senha');
-    const senhaErro = document.querySelector('#senhaErro');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    matriculaErro.textContent = '';
+    const emailInput = document.getElementById('email');
+    const senhaInput = document.getElementById('senha');
+    const emailErro = document.getElementById('emailErro');
+    const senhaErro = document.getElementById('senhaErro');
+
+    // Limpa erros
+    emailErro.textContent = '';
     senhaErro.textContent = '';
 
-    if (matriculaInput.value == '' ) {
-        matriculaErro.textContent = "Matricula e obrigatoria";
+    if (emailInput.value.trim() === '') {
+        emailErro.textContent = 'E-mail é obrigatório';
+        emailInput.focus();
+        emailInput.select();
         return;
     }
 
-    if(parseInt(matriculaInput.value) <= 0) {
-        matriculaErro.textContent = "Matricula deve ser um numero positivo";
+    if (!emailInput.value.includes('@')) {
+        emailErro.textContent = 'Digite um email válido';
+        emailInput.focus();
+        emailInput.select();
         return;
     }
 
-    if (matriculaInput.value.length != 8) {
-        matriculaErro.textContent = 'A matricula deve ter 8 digitos'
+    if (senhaInput.value.trim() === '') {
+        senhaErro.textContent = 'A senha é obrigatória';
+        senhaInput.focus();
+        senhaInput.select();
         return;
     }
 
-    if (senhaInput.value == '') {
-        senhaErro.textContent = 'A senha e obrigatoria'
+    if (senhaInput.value.length < 8) {
+        senhaErro.textContent = 'A senha deve ter no mínimo 8 caracteres';
+        senhaInput.focus();
+        senhaInput.select();
         return;
     }
 
-        if (senhaInput.value.length != 8) {
-        senhaErro.textContent = 'A senha deve ter no minimo 8 digitos'
-        return;
-    }
-})
+    // Sucesso
+    window.location.href = './index.html';
+});
