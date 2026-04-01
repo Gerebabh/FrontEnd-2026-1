@@ -72,6 +72,58 @@ nav {
     display: none;
 }
 
+/* ===== CSS LOGIN ===== */
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login > main {
+    display: flex;
+    margin: 1rem;
+    flex: 1;
+    border: 1px solid var(--cor-fundo);
+    border-radius: 6px;
+}
+
+.login img {
+    width: 9.5rem;
+    margin: 0 auto;
+}
+
+.login h1 {
+    text-align: center;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login main label {
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+.login button {
+    cursor: pointer
+}
+
+.login main input,
+.login main button {
+    border: 1px solid var(--cor-fundo);
+    height: 2rem;
+    margin: 0 1rem 1rem;
+}
+
+.login main p {
+        margin: 0 1rem;
+        color: red;
+}
+
+footer {
+    text-align: center;
+}
 
 @media (width >=768px) {
     main {
@@ -124,6 +176,16 @@ nav {
         grid-template-rows: auto 1fr;
         gap: 16px;
         padding-top: 1rem;
+    }
+
+    /* ===== CSS LOGIN ===== */
+    .login {
+        align-items: center;
+    }
+
+    .login main {
+        flex-direction: column;
+        width: 500px;
     }
 }
 
