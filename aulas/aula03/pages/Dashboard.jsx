@@ -4,13 +4,14 @@ import Layout from "./Layout";
 function Dashboard() {
     return (
         <>
-            <Layout />
+            <Layout>
                 <h2>Bem-vindo ao portal do aluno</h2>
                 <section>
                     <Card />
                     <Card />
                     <Card />
                 </section>
+            </Layout>
         </>
     );
 }
