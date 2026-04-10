@@ -1,15 +1,16 @@
-import Sidebar from "../components/Sidebar"
-import Topbar from "../components/Topbar";
+import Tabela from "../components/Tabela";
+import Layout from "../pages/Layout";
 
 function Notas() {
-    return <div>
-        <Sidebar />
-            <main>
-                <Topbar />
-                <h2>Minhas Notas</h2>
-                <section></section>
-            </main>
-        </div>
+    return <Layout 
+        titulo="Minhas Notas" 
+        subtitulo="Histórico de Notas por Semestre"
+        >
+            <Tabela />
+            <Tabela />
+            <Tabela />
+
+    </Layout>
 }
 
 export default Notas;

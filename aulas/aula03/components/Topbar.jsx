@@ -1,9 +1,9 @@
 import avatar from "../src/assets/avatar.svg"
 
-function topbar() {
+function topbar(props) {
     return (
-        <header>
-            <h1>Ola Aluno</h1>
+        <header className="flex justify-between">
+            <h1>{props.titulo}</h1>
             <img src={avatar} alt="Imagem do Avatar" />
         </header>
     );
