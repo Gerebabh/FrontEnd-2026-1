@@ -7,7 +7,7 @@ import Requerimentos from "../pages/Requerimentos";
 
 
 function App() {
-  const pagina = 5;
+  const pagina = 1;
   return (
     <>
       {pagina == 1 && <Dashboard />}

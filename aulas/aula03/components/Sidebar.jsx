@@ -3,7 +3,7 @@ import Menu from "./Menu"
 
 function sidebar() {
     return (
-        <aside>
+        <aside className="hidden lg:block">
             <header>
                 <img src={logo} alt="logotipo" />
                 <h1>Aluno Online</h1>
