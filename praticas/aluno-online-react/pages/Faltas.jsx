@@ -1,22 +1,38 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
-import Footer from "../components/Footer";
-import TabelaFaltas from "../components/TabelaFaltas";
+import Tabela from "../components/Tabela";
+import Layout from "../pages/Layout";
 
 function Faltas() {
+    const colunas = [
+    "Disciplina",
+    "Total de Faltas",
+    "% de Presença"
+  ];
+
+  const faltas_1_26 = [
+    {Disciplina: "Construção de Front End", Acum_Faltas: 2, Presenca: "97%"},
+    {Disciplina: "Manutenção de Software DevOps", Acum_Faltas: 2, Presenca: "97%"},
+    {Disciplina: "BI & Data Warehousing", Acum_Faltas: 0, Presenca: "100%"},
+    {Disciplina: "Direito Ambiental e Humano", Acum_Faltas: 0, Presenca: "100%"},
+    {Disciplina: "Governança de TI", Acum_Faltas: 0, Presenca: "100%"}
+  ];
+
+    const faltas_2_25 = [
+    {Disciplina: "Construção de Back End", Acum_Faltas: 0, Presenca: "100%"},
+    {Disciplina: "Engenharia de Software - MTD Ágeis", Acum_Faltas: 2, Presenca: "97%"},
+    {Disciplina: "Gerenciamento de Projetos", Acum_Faltas: 0, Presenca: "100%"},
+    {Disciplina: "Estrutura de Dados", Acum_Faltas: 4, Presenca: "94%"},
+    {Disciplina: "Direito", Acum_Faltas: 0, Presenca: "100%"}
+  ];
+
+
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen">
-      <Sidebar />
-      <main className="flex flex-col flex-1">
-        <Topbar />  {/* Sem props. Texto fixo da topbar */}
-        <h2 className="text-2xl font-semibold p-4">Histórico de Faltas por Semestre</h2>
-        <section className="flex-1">
-          <TabelaFaltas />
-          <TabelaFaltas />
-        </section>
-        <Footer />
-      </main>
-    </section>
+    <Layout
+      titulo="Minhas Faltas"
+      subtitulo="Histórico de Faltas por Semestre"
+    >
+      <Tabela semestre={2026.1} titulos={colunas} dados={faltas_1_26}/>
+      <Tabela semestre={2025.2} titulos={colunas} dados={faltas_2_25}/>
+    </Layout>
   );
 }
 

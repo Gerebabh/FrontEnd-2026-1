@@ -1,21 +1,31 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
-import Footer from "../components/Footer";
-import TabelaPagamentos from "../components/TabelaPagamentos";
+import Layout from "../pages/Layout";
+import Tabela from "../components/Tabela";
 
 function Boletos() {
+
+  const colunas = [
+    "Vencimento",
+    "Valor",
+    "Situação"
+  ];
+
+  const boletos = [
+    {vencimento: "01/01/2026", valor: 500, situacao:"Pago"},
+    {vencimento: "01/02/2026", valor: 500, situacao:"Pago"},
+    {vencimento: "01/03/2026", valor: 500, situacao:"Pago"},
+    {vencimento: "01/04/2026", valor: 500, situacao:"Pago"},
+    {vencimento: "01/05/2026", valor: 500, situacao:"Pago"},
+    {vencimento: "01/06/2026", valor: 500, situacao:"A Vencer"},
+    {vencimento: "01/07/2026", valor: 500, situacao:"A Vencer"}
+  ]
+
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen">
-      <Sidebar />
-      <main className="flex flex-col flex-1">
-        <Topbar />  {/* Sem props. Texto fixo da topbar */}
-        <h2 className="text-2xl font-semibold p-4">Histórico de Pagamentos</h2>
-        <section className="flex-1">
-          <TabelaPagamentos />
-        </section>
-        <Footer />
-      </main>
-    </section>
+    <Layout
+      titulo="Meus Boletos"
+      subtitulo="Histórico de Pagamentos"
+    >
+      <Tabela semestre={1.2026} titulos={colunas} dados={boletos} />
+    </Layout>
   );
 }
 

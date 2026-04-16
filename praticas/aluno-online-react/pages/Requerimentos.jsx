@@ -1,26 +1,30 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
-import Footer from "../components/Footer";
-import TabelaRequerimentos from "../components/TabelaRequerimentos";
+import Layout from "../pages/Layout";
+import Tabela from "../components/Tabela";
 
 function Requerimentos() {
+
+  const colunas = [
+    "Tipo Requerimento",
+    "Data Solicitação",
+    "Situação"
+  ]
+
+  const requerimentos = [
+    {Requerimento: "Aprovar o aluno com SS", Data: "08/04/2026", Situacao: "Deferido"},
+    {Requerimento: "Revisão de Menção", Data: "15/12/2025", Situacao: "Indeferido"},
+    {Requerimento: "Dispensa de Disciplina", Data: "12/06/2025", Situacao: "Deferido"},
+    {Requerimento: "Trancamento de Matrícula", Data: "05/01/2024", Situacao: "Deferido"},
+    {Requerimento: "Mudança de Turno", Data: "10/10/2023", Situacao: "Deferido"},
+  ]
+
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen">
-      <Sidebar />
-      <main className="flex flex-col flex-1">
-        <Topbar />  {/* Sem props. Texto fixo da topbar */}
-        <header className="p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <h2 className="text-2xl font-semibold">Faça Solicitações Online Para Secretaria</h2>
-          <button className="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-md self-start md:self-auto">
-              + Novo Requerimento
-          </button>
-        </header>
-        <section className="flex-1">
-          <TabelaRequerimentos />
-        </section>
-        <Footer />
-      </main>
-    </section>
+        <Layout
+          titulo="Meus Requerimentos"
+          subtitulo="Faça Solicitações Online Para Secretaria"
+        >
+        <Tabela semestre={2026.1} titulos={colunas} dados={requerimentos}/>
+
+        </Layout>
   );
 }
 
