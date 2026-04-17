@@ -3,13 +3,15 @@ import Layout from "../pages/Layout";
 
 
 function Faltas() {
+    const colunas = []
+    const faltas = []
+
 return <Layout 
         titulo="Minhas Faltas" 
         subtitulo="Histórico de Faltas por Semestre"
         >
-            <Tabela />
-            <Tabela />
-            <Tabela />
+            <Tabela titulos={colunas} dados={faltas}/>
+
         </Layout>
 }
 
