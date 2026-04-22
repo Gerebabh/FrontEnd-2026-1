@@ -4,6 +4,7 @@ import Notas from "../pages/Notas";
 import Faltas from "../pages/Faltas";
 import Boletos from "../pages/Boletos";
 import Requerimentos from "../pages/Requerimentos";
+import Layout from "../pages/Layout";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {pagina == 3 && <Faltas />}
       {pagina == 4 && <Boletos />}
       {pagina == 5 && <Requerimentos />}
+      {pagina == 6 && <Layout />}
     </>
   );
 }

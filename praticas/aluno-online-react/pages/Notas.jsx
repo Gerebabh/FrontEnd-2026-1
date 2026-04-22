@@ -1,23 +1,41 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
-import TabelaNotas from "../components/TabelaNotas";
-import Footer from "../components/Footer";
+import Layout from "../pages/Layout";
+import Tabela from "../components/Tabela";
+
 
 
 function Notas() {
+  const colunas = [
+    "Disciplina",
+    "A1",
+    "A2",
+    "A3",
+    "Menção"
+  ];
+
+  const notas_1_26 = [
+    {Disciplina: "Construção de Front End", A1: 9, A2:"--", A3:"--", Menção: "--"},
+    {Disciplina: "Manutenção de Software DevOps", A1: 9.5, A2:"--", A3:"--", Menção: "--"},
+    {Disciplina: "BI & Data Warehousing", A1: 9.3, A2:"--", A3:"--", Menção: "--"},
+    {Disciplina: "Direito Ambiental e Humano", A1: 9.7, A2:"--", A3:"--", Menção: "--"},
+    {Disciplina: "Governança de TI", A1: 9, A2:"--", A3:"--", Menção: "--"}
+  ];
+
+  const notas_1_25 = [
+    {Disciplina: "Construção de Back End", A1: 8, A2: 9, A3:"--", Menção: "MS"},
+    {Disciplina: "Engenharia de Software - MTD Ágeis", A1: 9.1, A2:9, A3:"--", Menção: "SS"},
+    {Disciplina: "Gerenciamento de Projetos", A1: 9, A2:9.3, A3:"--", Menção: "SS"},
+    {Disciplina: "Estrutura de Dados", A1: 9.2, A2:8.9, A3:"--", Menção: "SS"}
+  ];
+
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen">
-      <Sidebar />
-      <main className="flex flex-col flex-1">
-        <Topbar />  {/* Sem props. Texto fixo da topbar */}
-        <h2 className="text-2xl font-semibold p-4">Histórico de Notas por Semestre</h2>
-        <section className="flex-1">
-          <TabelaNotas />
-          <TabelaNotas />
-        </section>
-        <Footer />
-      </main>
-    </section>
+      <Layout 
+      titulo="Minhas Notas" 
+      subtitulo="Histórico de Notas por Semestre"
+    >
+        <Tabela semestre={2026.1} titulos={colunas} dados={notas_1_26}/>
+        <Tabela semestre={2025.2} titulos={colunas} dados={notas_1_25}/>
+
+    </Layout>
   );
 }
 
