@@ -5,12 +5,14 @@ import Faltas from "../pages/Faltas";
 import Boletos from "../pages/Boletos";
 import Requerimentos from "../pages/Requerimentos";
 import Layout from "../pages/Layout";
+import Login from "../pages/Login";
 
 
 function App() {
-  const pagina = 1;
+  const pagina = 0;
   return (
     <>
+      {pagina == 0 && <Login />}
       {pagina == 1 && <Dashboard />}
       {pagina == 2 && <Notas />}
       {pagina == 3 && <Faltas />}
