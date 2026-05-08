@@ -3,7 +3,7 @@ import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router";
 
-function Layout (props) {
+function Layout () {
     return (
         <section className="flex flex-col lg:flex-row min-h-screen">
         <Sidebar />
