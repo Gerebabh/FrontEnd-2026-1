@@ -1,5 +1,5 @@
 import Tabela from "../components/Tabela";
-import Layout from "../pages/Layout";
+import Layout from "../layouts/Layout";
 
 function Faltas() {
     const colunas = [
@@ -26,13 +26,10 @@ function Faltas() {
 
 
   return (
-    <Layout
-      titulo="Minhas Faltas"
-      subtitulo="Histórico de Faltas por Semestre"
-    >
+    <>
       <Tabela semestre={2026.1} titulos={colunas} dados={faltas_1_26}/>
       <Tabela semestre={2025.2} titulos={colunas} dados={faltas_2_25}/>
-    </Layout>
+    </>
   );
 }
 
