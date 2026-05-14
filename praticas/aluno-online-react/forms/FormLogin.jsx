@@ -1,23 +1,34 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router";
 import InputEmail from '../components/InputEmail';
 import InputSenha from '../components/InputSenha';
 import BotaoSubmit from '../components/BotaoSubmit';
 
 function FormLogin () {
-
-    const [email, setEmail] = useState();
-    const [senha, setSenha] = useState();
-    const [emailErro, setEmailErro] = useState ();
-    const [senhaErro, setSenhaErro] = useState ();
+    
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [emailErro, setEmailErro] = useState ("");
+    const [senhaErro, setSenhaErro] = useState ("");
 
     const trataSubmit = (e) => {
+
         e.preventDefault();
+        let temErro = false;
+        
         if (!email) {
-            setEmailErro("Email é Obrigatório")
+            setEmailErro("Email é Obrigatório");
+            temErro = true;
         };
 
+        setSenhaErro("Senha é Obrigatório")
         if (!senha) {
-            setSenhaErro("Senha é Obrigatório")
+            temErro = true;
+        };
+
+        if (!temErro) {
+        navigate("/");
         };
     };
 

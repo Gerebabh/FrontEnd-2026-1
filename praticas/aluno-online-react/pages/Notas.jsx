@@ -1,4 +1,4 @@
-import Layout from "../pages/Layout";
+import Layout from "../layouts/Layout";
 import Tabela from "../components/Tabela";
 
 
@@ -28,14 +28,10 @@ function Notas() {
   ];
 
   return (
-      <Layout 
-      titulo="Minhas Notas" 
-      subtitulo="Histórico de Notas por Semestre"
-    >
+      <>
         <Tabela semestre={2026.1} titulos={colunas} dados={notas_1_26}/>
         <Tabela semestre={2025.2} titulos={colunas} dados={notas_1_25}/>
-
-    </Layout>
+    </>
   );
 }
 

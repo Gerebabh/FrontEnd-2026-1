@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import Layout from "../pages/Layout"
+import Layout from "../layouts/Layout"
 
 function Dashboard() {
     const avisos = [
@@ -20,14 +20,11 @@ function Dashboard() {
     ]
 
   return (
-    <Layout 
-      titulo="Olá Aluno"
-      subtitulo="Bem vindo ao portal do aluno"
-    >
+    <>
       <Card titulo="Mural de Avisos" items={avisos}/>
       <Card titulo="Calendário Acadêmico" items={datas}/>
       <Card titulo="Minhas Disciplinas" items={disciplinas}/>
-    </Layout>
+    </>
   );
 }
 

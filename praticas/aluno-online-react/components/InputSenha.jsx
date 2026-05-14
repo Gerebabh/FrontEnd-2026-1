@@ -8,7 +8,7 @@ function InputSenha ({erro, mudaValor}) {
                 name="senha"
                 onChange={mudaValor}
                 placeholder="Digite sua senha"
-                className="border-2 border-gray-200 rouded-md"
+                className="w-full border border-gray-400 rounded-lg p-2 outline-none"
             />
                 <p>{erro && <span className="text-xs text-red-500 mt-1">{erro}</span>}</p>
         </fieldset>
