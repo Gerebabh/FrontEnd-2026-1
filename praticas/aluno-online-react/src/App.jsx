@@ -11,12 +11,7 @@ import Erro404 from "../pages/Erro404";
 function App() {
   return (
     <Routes>
-      {/* Rota de Login: Fica FORA do Layout para ocupar a tela toda */}
-      <Route path="/login" element={<Login />} />
-
-      {/* Rotas Protegidas: Todas usam o Layout (Sidebar/Navbar) */}
       <Route path="/" element={<Layout />}>
-        {/* O index agora é o Dashboard, que é a tela principal após logar */}
         <Route index element={<Dashboard />} />
         <Route path="notas" element={<Notas />} />
         <Route path="faltas" element={<Faltas />} />
@@ -24,7 +19,7 @@ function App() {
         <Route path="requerimentos" element={<Requerimentos />} />
       </Route>
 
-      {/* Rota para páginas não encontradas */}
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<Erro404 />} />
     </Routes>
   );
