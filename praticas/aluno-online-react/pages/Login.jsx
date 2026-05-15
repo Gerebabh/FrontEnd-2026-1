@@ -1,4 +1,4 @@
-import logo from '../src/assets/learn.svg'
+import logo from '../src/assets/learn.svg';
 import FormLogin from '../forms/FormLogin';
 import Footer from '../components/Footer';
 
