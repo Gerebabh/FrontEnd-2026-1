@@ -1,20 +1,22 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router";
+import { useAuthContext } from '../src/contexts/AuthContext';
 import InputEmail from '../components/InputEmail';
 import InputSenha from '../components/InputSenha';
 import BotaoSubmit from '../components/BotaoSubmit';
 
 function FormLogin () {
-    
     const navigate = useNavigate();
+    const { login } = useAuthContext();
+
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [emailErro, setEmailErro] = useState ("");
     const [senhaErro, setSenhaErro] = useState ("");
 
     const trataSubmit = (e) => {
-
         e.preventDefault();
+
         let temErro = false;
         
         if (!email) {
@@ -28,8 +30,15 @@ function FormLogin () {
         };
 
         if (!temErro) {
-        navigate("/");
-        };
+            const sucesso = login({ email, senha });
+
+            if (sucesso) {
+                navigate("/");
+            } else {
+                setEmailErro("E-mail ou senha inválidos");
+                setSenhaErro("")
+            }
+        }
     };
 
     const mudaEmail = (e) => {
@@ -40,6 +49,7 @@ function FormLogin () {
         setSenha(e.target.value);
         setSenhaErro("");
     };
+    
 
     return (
         <form onSubmit={trataSubmit} className="flex flex-col gap-2">
