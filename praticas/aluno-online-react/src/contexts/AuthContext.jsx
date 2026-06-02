@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 //cria o provedor
 function AuthProvider ({ children }) {
-    const [logado, setLogado] = useState(false);
+    const [logado, setLogado] = useState(true);
     const [usuario, setUsuario] = useState({});
 
     const login = (dados) => {
@@ -33,8 +33,8 @@ function AuthProvider ({ children }) {
     )
 };
 
-function UseAuthContext() {
+function useAuthContext() {
     return useContext(AuthContext);
 }
 
-export { UseAuthContext, AuthProvider }
+export { useAuthContext, AuthProvider }

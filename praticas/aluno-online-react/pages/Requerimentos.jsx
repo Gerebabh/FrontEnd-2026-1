@@ -1,8 +1,12 @@
 import Layout from "../layouts/Layout";
 import Tabela from "../components/Tabela";
+import Botao from "../components/Botao";
+import { useNavigate } from "react-router";
 
 function Requerimentos() {
   const colunas = ["Tipo Requerimento", "Data Solicitação", "Situação"];
+
+  const navigate = useNavigate();
 
   const requerimentos = [
     {
@@ -31,8 +35,19 @@ function Requerimentos() {
       Situacao: "Deferido",
     },
   ];
-
-  return <Tabela semestre={2026.1} titulos={colunas} dados={requerimentos} />;
+  
+  return  (
+    <>
+      <Botao
+        onClick={() => navigate("/requerimentoform")}
+        className="w-60 h-12 ml-4 mb-4" 
+        >
+          ➕ Novo Requerimento 
+        </Botao>
+      <Tabela semestre={2026.1} titulos={colunas} dados={requerimentos} />;
+    </>
+  )
 }
+
 
 export default Requerimentos;

@@ -1,5 +1,5 @@
 import logo from '../src/assets/learn.svg';
-import FormLogin from '../forms/FormLogin';
+import FormLogin from '../src/forms/FormLogin';
 import Footer from '../components/Footer';
 
 function Login() {
