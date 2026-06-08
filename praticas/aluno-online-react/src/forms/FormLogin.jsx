@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router";
-import { useAuthContext } from '../src/contexts/AuthContext';
-import InputEmail from '../components/InputEmail';
-import InputSenha from '../components/InputSenha';
-import BotaoSubmit from '../components/BotaoSubmit';
+import { useAuthContext } from '../contexts/AuthContext';
+import InputEmail from '../../components/InputEmail';
+import InputSenha from '../../components/InputSenha';
+import BotaoSubmit from '../../components/BotaoSubmit';
 
 function FormLogin () {
     const navigate = useNavigate();

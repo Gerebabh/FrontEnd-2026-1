@@ -7,6 +7,7 @@ import Requerimentos from "../pages/Requerimentos";
 import Layout from "../layouts/Layout";
 import Login from "../pages/Login";
 import Erro404 from "../pages/Erro404";
+import RequerimentoForm from "./forms/RequerimentoForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="faltas" element={<Faltas />} />
         <Route path="boletos" element={<Boletos />} />
         <Route path="requerimentos" element={<Requerimentos />} />
+        <Route path="requerimentoform" element={<RequerimentoForm />} />
       </Route>
 
       <Route path="/login" element={<Login />} />
