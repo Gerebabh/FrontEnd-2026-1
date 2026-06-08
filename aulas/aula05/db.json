@@ -1,0 +1,38 @@
+{
+  "produtos": [
+    {
+      "nome": "banana",
+      "preco": 12.5,
+      "unidade": "kg",
+      "id": "q4F0m-mBAsc"
+    },
+    {
+      "nome": "banana",
+      "preco": 12.5,
+      "unidade": "kg",
+      "id": "3HqzLg_pdiM"
+    },
+    {
+      "nome": "banana",
+      "preco": 12.5,
+      "unidade": "kg",
+      "id": "Za4YQIb1PM0"
+    },
+    {
+      "nome": "Teste",
+      "preco": "5,00",
+      "unidade": "666",
+      "id": "mlTycITfyk8"
+    },
+    {
+      "nome": "maca",
+      "preco": "5",
+      "unidade": "2",
+      "id": "ed2FJwPPjXo"
+    }
+  ],
+  "clientes": [],
+  "fornecedores": [],
+  "pedidos": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
