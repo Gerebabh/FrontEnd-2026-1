@@ -5,6 +5,13 @@ import { listar, remover } from '../services/produtoServices';
 function Listagem() {
     const [dados, setDados] = useState ([]);
 
+    const trataRemover = async(produto) => {
+        await remover(produto);
+        setDados(dados.filter(item => item.id != produto.id))
+    }
+
+    
+
     useEffect (() => { 
         // dispatch
         const disparar = async() => {
@@ -33,8 +40,13 @@ function Listagem() {
                         <td>{item.preco}</td>
                         <td>{item.unidade}</td>
                         <td>
-                            <Link to={`/produtos/editar/${item.id}`}>Editar</Link>
-                            <Link to={`/produtos`}>Remover</Link>
+                            <Link to={`/produtos/editar/${item.id}`}>
+                                Editar
+                            </Link>
+                            
+                            <Link to="/produtos" onClick={() => trataRemover(item)}>
+                                Remover
+                            </Link>
                         </td>
                     </tr>
                 ))}

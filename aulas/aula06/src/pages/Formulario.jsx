@@ -1,15 +1,29 @@
-import { Link, useNavigate } from "react-router";
+import { useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router";
 import { useForm } from "react-hook-form";
-import { criar } from "../services/produtoServices";
+import { criar, modificar, obter } from "../services/produtoServices";
 
 function Formulario() {
-    const { register, handleSubmit } = useForm();
+    const { id } = useParams();
+    const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
 
     const salvar = async (dados) => {
-        await criar(dados)
+        if (id) {
+                await modificar ({id, ...dados});
+            } else {
+            await criar(dados);
+            }
         navigate("/produtos");
-    }
+    };
+
+    useEffect(() => {
+        const disparar = async() => {
+            const produto = await obter({id});
+            reset(produto);
+        }
+        if (id) disparar(); //Dispara so quando  modificar
+    }, []);
 
     return <>
         <h1>Cadastro de Produtos</h1>

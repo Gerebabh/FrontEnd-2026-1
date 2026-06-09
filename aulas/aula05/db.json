@@ -1,34 +1,22 @@
 {
   "produtos": [
     {
-      "nome": "banana",
-      "preco": 12.5,
-      "unidade": "kg",
-      "id": "q4F0m-mBAsc"
+      "id": "zlirF2PuDvs",
+      "nome": "Laranja Pera",
+      "preco": "2.99",
+      "unidade": "UN"
     },
     {
-      "nome": "banana",
-      "preco": 12.5,
-      "unidade": "kg",
-      "id": "3HqzLg_pdiM"
+      "id": "IQOmkSdYG2E",
+      "nome": "Maca Fuji",
+      "preco": "8.99",
+      "unidade": "KG"
     },
     {
-      "nome": "banana",
-      "preco": 12.5,
-      "unidade": "kg",
-      "id": "Za4YQIb1PM0"
-    },
-    {
-      "nome": "Teste",
-      "preco": "5,00",
-      "unidade": "666",
-      "id": "mlTycITfyk8"
-    },
-    {
-      "nome": "maca",
-      "preco": "5",
-      "unidade": "2",
-      "id": "ed2FJwPPjXo"
+      "id": "3Hj_fEs2ts4",
+      "nome": "Melao Premium",
+      "preco": "11.00",
+      "unidade": "KG"
     }
   ],
   "clientes": [],
