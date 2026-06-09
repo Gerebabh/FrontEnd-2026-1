@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
-import { criar } from "../../services/produtoServices";
+import { criar } from "../services/produtoServices";
 
 function Formulario() {
     const { register, handleSubmit } = useForm();

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
-import Listagem from './assets/pages/Listagem';
-import Formulario from './assets/pages/Formulario';
+import Listagem from './pages/Listagem';
+import Formulario from './pages/Formulario';
 
 function App() {
   return <Routes>

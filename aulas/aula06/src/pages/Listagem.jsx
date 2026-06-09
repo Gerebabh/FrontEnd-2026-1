@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { listar } from '../../services/produtoServices';
+import { listar, remover } from '../services/produtoServices';
 
 function Listagem() {
     const [dados, setDados] = useState ([]);
