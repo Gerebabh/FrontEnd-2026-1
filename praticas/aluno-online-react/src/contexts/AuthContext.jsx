@@ -33,8 +33,5 @@ function AuthProvider ({ children }) {
     )
 };
 
-function UseAuthContext() {
-    return useContext(AuthContext);
-}
 
-export { UseAuthContext, AuthProvider }
+export { AuthContext, AuthProvider }

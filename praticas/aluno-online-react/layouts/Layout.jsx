@@ -2,7 +2,7 @@ import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import { Outlet, Navigate } from "react-router";
-import { useAuthContext } from "../src/contexts/AuthContext";
+import { useAuthContext } from "../src/hooks/useAuthcontext";
 
 function Layout () {
     const { logado } = useAuthContext();
