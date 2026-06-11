@@ -19,7 +19,7 @@ function Tabela({titulos, dados, semestre}) {
                 <tr className="border-b border-gray-200" key={item.id || index}>
                     {Object.entries(item)
                         .filter(([chave]) => chave !== "id")
-                        .map(([_, valor], idx) => (
+                        .map(([, valor], idx) => (
                             <td className="p-3 text-center border-x border-gray-200" key={idx}>
                                 {valor}
                             </td>
