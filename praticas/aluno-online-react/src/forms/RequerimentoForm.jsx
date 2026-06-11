@@ -1,8 +1,11 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { useEffect } from "react";
 import Botao from "../../components/Botao";
+import { criar } from "../services/requerimentoService";
 
 function RequerimentoForm() {
+
     const {
         register,
         handleSubmit,
@@ -10,7 +13,8 @@ function RequerimentoForm() {
         formState: { errors }
     } = useForm({
         defaultValues: {
-            dataRequerimento: new Date ().toLocaleDateString("en-CA")
+            dataRequerimento: new Date ().toLocaleDateString("en-CA"),
+            situacao:"Novo"
         }
     });
 
@@ -22,8 +26,9 @@ function RequerimentoForm() {
 
     const navigate = useNavigate();
 
-    const onSubmit = (dados) => {
-        console.log("Dados do Requerimento enviado:", dados);
+    const onSubmit = async (dados) => {
+        // console.log("Dados do Requerimento enviado:", dados);
+        await criar(dados);
         navigate("/requerimentos");
     };
 

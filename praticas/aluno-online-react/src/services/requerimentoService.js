@@ -42,7 +42,7 @@ async function modificar (requerimento) {
             method: "PUT",
             body: JSON.stringify(requerimento),
             headers: {
-                "content-type":"aplication/json"
+                "content-type":"application/json"
             }
         });
         const dados = await response.json();

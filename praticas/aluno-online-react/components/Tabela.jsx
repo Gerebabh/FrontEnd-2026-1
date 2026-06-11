@@ -15,13 +15,18 @@ function Tabela({titulos, dados, semestre}) {
                 </tr>
             </thead>
             <tbody>
-                {dados.map ((item, index) =>
-                <tr className="border-b border-gray-200" key={index}>
-                    {Object.values(item).map((valor, index) => (
-                    <td className="p-3 text-center border-x border-gray-200" key={index}>{valor}</td>
-                    ))}
+                {dados.map((item, index) => (
+                <tr className="border-b border-gray-200" key={item.id || index}>
+                    {Object.entries(item)
+                        .filter(([chave]) => chave !== "id")
+                        .map(([chave, valor], idx) => (
+                            <td className="p-3 text-center border-x border-gray-200" key={idx}>
+                                {valor}
+                            </td>
+                        ))
+                    }
                 </tr>
-                )}
+            ))}
             </tbody>
         </table>
     </article>
