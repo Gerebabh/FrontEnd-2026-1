@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
-import { useEffect } from "react";
 import Botao from "../../components/Botao";
 import { criar } from "../services/requerimentoService";
 
