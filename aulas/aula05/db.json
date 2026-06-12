@@ -22,5 +22,12 @@
   "clientes": [],
   "fornecedores": [],
   "pedidos": [],
+  "usuarios": [
+    {
+      "email": "geralucio@gmail.com",
+      "senha": "123",
+      "id": "abcd1234"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
