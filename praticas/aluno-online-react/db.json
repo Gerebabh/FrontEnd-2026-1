@@ -1,0 +1,50 @@
+{
+  "requerimentos": [
+    {
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "Materia realizada em outro curso",
+      "data": "11/06/2026",
+      "id": "_kjtXsLKlUc"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "tipo": "Revisão de Menção",
+      "descricao": "kjgfjfjhgfhjfgfhjfgjfjhfjhfjf",
+      "id": "D5oAixECrcc"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "tipo": "Mudança de Turno",
+      "descricao": "Mudar para o turno da noite. Novo emprego durante o dia.",
+      "id": "O2rqPQoPAhc"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "tipo": "Revisão de Menção",
+      "descricao": "Aprovar o aluno com nota maxima ",
+      "id": "ctRDrY6cNb0"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "situacao": "Novo",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "Agora tem que ir. A adicao esta dentro do Handler",
+      "id": "SXmKU1ARqE8"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "situacao": "Novo",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "Materia ja feita pelo aluno",
+      "id": "_yADO7aRZa4"
+    },
+    {
+      "dataRequerimento": "2026-06-11",
+      "situacao": "Novo",
+      "tipo": "Revisão de Menção",
+      "descricao": "tytyertyteyeryetyetry",
+      "id": "8PMDH_zAB0g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

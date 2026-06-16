@@ -2,40 +2,29 @@ import Layout from "../layouts/Layout";
 import Tabela from "../components/Tabela";
 import Botao from "../components/Botao";
 import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import { listar } from "../src/services/requerimentoService";
 
 function Requerimentos() {
   const colunas = ["Tipo Requerimento", "Data Solicitação", "Situação"];
-
   const navigate = useNavigate();
 
-  const requerimentos = [
-    {
-      Requerimento: "Aprovar o aluno com SS",
-      Data: "08/04/2026",
-      Situacao: "Deferido",
-    },
-    {
-      Requerimento: "Revisão de Menção",
-      Data: "15/12/2025",
-      Situacao: "Indeferido",
-    },
-    {
-      Requerimento: "Dispensa de Disciplina",
-      Data: "12/06/2025",
-      Situacao: "Deferido",
-    },
-    {
-      Requerimento: "Trancamento de Matrícula",
-      Data: "05/01/2024",
-      Situacao: "Deferido",
-    },
-    {
-      Requerimento: "Mudança de Turno",
-      Data: "10/10/2023",
-      Situacao: "Deferido",
-    },
-  ];
-  
+  const [requerimentos, SetRequerimentos] = useState([]);
+
+  useEffect (() => {
+      const disparar = async () => {
+        const resposta = await listar ();
+      const dadosFormatados = resposta.map(item => ({
+        id: item.id,
+        Requerimento: item.tipo,
+        Data: item.dataRequerimento,
+        Situacao: item.situacao
+      }));
+      SetRequerimentos(dadosFormatados);
+      };
+    disparar();
+  }, []);
+
   return  (
     <>
       <Botao

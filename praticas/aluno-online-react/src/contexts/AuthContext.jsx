@@ -1,11 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 //cria o contexto
 const AuthContext = createContext();
 
 //cria o provedor
 function AuthProvider ({ children }) {
-    const [logado, setLogado] = useState(false);
+    const [logado, setLogado] = useState(true);
     const [usuario, setUsuario] = useState({});
 
     const login = (dados) => {
@@ -33,8 +33,5 @@ function AuthProvider ({ children }) {
     )
 };
 
-function UseAuthContext() {
-    return useContext(AuthContext);
-}
 
-export { UseAuthContext, AuthProvider }
+export { AuthContext, AuthProvider }
