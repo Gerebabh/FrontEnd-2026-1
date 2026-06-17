@@ -23,8 +23,6 @@ function AuthProvider ({ children }) {
     }
 
     const logout = () => {
-        console.log("logout executado");
-
         setUsuario({});
         setLogado(false);
 

@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import Botao from "../../components/Botao";
 import { criar } from "../services/requerimentoService";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 function RequerimentoForm() {
+
+    const { logout } = useAuthContext();
 
     const {
         register,
@@ -26,9 +29,15 @@ function RequerimentoForm() {
     const navigate = useNavigate();
 
     const onSubmit = async (dados) => {
-        // console.log("Dados do Requerimento enviado:", dados);
-        await criar(dados);
-        navigate("/requerimentos");
+        try {
+            await criar(dados);
+            navigate("/requerimentos");
+
+        } catch (error) {
+            if (error.message === "401") {
+                logout();
+            }
+        }
     };
 
     const regras = {

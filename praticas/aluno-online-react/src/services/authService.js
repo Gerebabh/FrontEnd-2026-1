@@ -2,12 +2,9 @@ const url = "http://localhost:3000/usuarios";
 
 async function autenticar(credenciais) {
     const { email, senha } = credenciais;
-    console.log(credenciais)
+
     const resposta = await fetch(`${url}?email=${email}`);
     const usuario = await resposta.json();
-
-    console.log("URL:", `${url}?email=${email}`);
-    console.log("Usuário encontrado:", usuario);
 
     // SABOR AUTENTICAÇÃO
     if (usuario[0]?.email === email 

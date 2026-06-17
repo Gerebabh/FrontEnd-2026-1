@@ -4,8 +4,6 @@ import { Navigate, Outlet } from "react-router";
 function Privado() {
     const { logado } = useAuthContext();
 
-    console.log("LOGADO:", logado);
-
     return <> 
         {logado ?
             <Outlet/>
