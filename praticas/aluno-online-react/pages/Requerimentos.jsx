@@ -35,7 +35,7 @@ function Requerimentos() {
     };
 
     disparar();
-  }, []);
+  }, [logout]);
 
   return (
     <>
