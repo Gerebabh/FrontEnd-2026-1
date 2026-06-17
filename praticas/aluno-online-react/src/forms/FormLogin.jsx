@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router";
-import { useAuthContext } from '../hooks/useAuthcontext';
+import { useAuthContext } from '../hooks/useAuthContext';
 import InputEmail from '../../components/InputEmail';
 import InputSenha from '../../components/InputSenha';
 import BotaoSubmit from '../../components/BotaoSubmit';
@@ -14,7 +14,7 @@ function FormLogin () {
     const [emailErro, setEmailErro] = useState ("");
     const [senhaErro, setSenhaErro] = useState ("");
 
-    const trataSubmit = (e) => {
+    const trataSubmit = async (e) => {
         e.preventDefault();
 
         let temErro = false;
@@ -24,19 +24,17 @@ function FormLogin () {
             temErro = true;
         };
 
-        setSenhaErro("Senha é Obrigatório")
         if (!senha) {
+            setSenhaErro("Senha é Obrigatório")
             temErro = true;
         };
 
         if (!temErro) {
-            const sucesso = login({ email, senha });
-
-            if (sucesso) {
+            try {
+                await login({ email, senha });
                 navigate("/");
-            } else {
-                setEmailErro("E-mail ou senha inválidos");
-                setSenhaErro("")
+            } catch (error) {
+                setEmailErro(error.message);
             }
         }
     };
