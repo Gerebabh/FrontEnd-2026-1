@@ -27,6 +27,55 @@
       "tipo": "Trancamento de Matrícula",
       "descricao": "Desisti de fazer a matéria",
       "id": "NQv46WKWPg4"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Mudança de Turno",
+      "descricao": "Deseja mudar para o turno da tarde.",
+      "id": "LkZXwQwxZPc"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Mudança de Turno",
+      "descricao": "Mudando novamente de turno",
+      "id": "OsAq0iUzJ3I"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Dispensa de Disciplina",
+      "descricao": "Não quero fazer a materia",
+      "id": "jjz8f2scHWM"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Revisão de Menção",
+      "descricao": "Depois de descobrir o problema do app:token e app.token do LocalStorage... Problema resolvido\nMerece SSS",
+      "id": "9nWuRhNLeQo"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Revisão de Menção",
+      "descricao": "afasdfasdfasdfadsfadsfdasf",
+      "id": "Q3Pt7hrZUpg"
+    },
+    {
+      "dataRequerimento": "2026-06-17",
+      "situacao": "Novo",
+      "tipo": "Mudança de Turno",
+      "descricao": "adfasdfasdfadfadfasdf",
+      "id": "iHUPQTx35xY"
+    }
+  ],
+  "usuarios": [
+    {
+      "email": "geralucio@gmail.com",
+      "senha": "123",
+      "id": "abcd1234"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
